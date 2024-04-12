@@ -24,7 +24,7 @@ chmod a+x hfd.sh
 ## 下载数据集
 
 ```shell
-HF_ENDPOINT=https://hf-mirror.com bash /mnt/cfs/danerli/datasets/tools/hfd.sh Skywork/SkyPile-150B --dataset --local-dir /mnt/cfs/danerli/datasets/tools/SkyPile-150B --tool aria2c -x 4
+HF_ENDPOINT=https://hf-mirror.com bash /mnt/cfs/danerli/datasets/tools/hfd.sh Skywork/SkyPile-150B --dataset --local-dir /mnt/cfs/danerli/datasets/SkyPile-150B --tool aria2c -x 4
 ```
 
 ## 下载模型
