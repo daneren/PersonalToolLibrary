@@ -4,7 +4,7 @@
 # aria2
 # https://zhuanlan.zhihu.com/p/637294044?utm_id=0
 # centos
-sudo yum update && sudo yum install -y epel-release aria2
+sudo yum update && sudo yum install epel-release -y && yum install aria2 -y
 # ubuntu
 sudo apt update && sudo apt install -y aria2
 
