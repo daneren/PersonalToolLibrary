@@ -4,9 +4,9 @@
 # aria2
 # https://zhuanlan.zhihu.com/p/637294044?utm_id=0
 # centos
-sudo yum update && sudo yum install epel-release aria2
+sudo yum update && sudo yum install -y epel-release aria2
 # ubuntu
-sudo apt update && sudo apt install aria2
+sudo apt update && sudo apt install -y aria2
 
 # centos 7
 # https://github.com/git-lfs/git-lfs/blob/main/INSTALLING.md
@@ -15,8 +15,8 @@ yum install git-lfs -y
 
 # download df-data download tool
 # https://gist.github.com/padeoe/697678ab8e528b85a2a7bddafea1fa4f
-wget https://hf-mirror.com/hfd/hfd.sh
-chmod a+x hfd.sh
+wget https://hf-mirror.com/hfd/hfd.sh /mnt/cfs/danerli/datasets/tools/hfd.sh
+chmod a+x /mnt/cfs/danerli/datasets/tools/hfd.sh
 ```
 
 # 2、使用
