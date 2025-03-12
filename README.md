@@ -10,5 +10,5 @@ wget https://raw.githubusercontent.com/daneren/PersonalToolLibrary/refs/heads/ma
 
 ### 快速添加定义命令
 ```shell
-wget https://raw.githubusercontent.com/daneren/PersonalToolLibrary/refs/heads/main/costum_commands.sh && cat costum_commands.sh >> ~/.bashrc && source ~/.bashrc
+wget https://raw.githubusercontent.com/daneren/PersonalToolLibrary/refs/heads/main/costum_commands.sh && cat costum_commands.sh >> ~/.bashrc && source ~/.bashrc && cat ~/.bashrc
 ```
