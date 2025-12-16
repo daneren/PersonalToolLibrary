@@ -1,0 +1,62 @@
+--- 计算指标: timing_s/step vs timing_s/gen 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/step: 2633.03
+   范围标准差 timing_s/step: 245.84
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/gen: 2006.33
+   范围标准差 timing_s/gen: 209.80
+mean1: 2633.0259071808773
+mean2: 2006.3311894658486
+mean1-mean2: 626.69
+mean2 / (mean1-mean2): 3.20
+--- 计算指标: timing_s/step vs timing_s/gen 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/step: 2819.02
+   范围标准差 timing_s/step: 269.80
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/gen: 2184.98
+   范围标准差 timing_s/gen: 223.67
+mean1: 2819.0175326178783
+mean2: 2184.9760750993155
+mean1-mean2: 634.04
+mean2 / (mean1-mean2): 3.45
+--- 计算指标: perf/time_per_step 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 perf/time_per_step: 2633.03
+   范围标准差 perf/time_per_step: 245.84
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 perf/time_per_step: 2819.02
+   范围标准差 perf/time_per_step: 269.80
+mean1: 2633.0259071808773
+mean2: 2819.0175326178783
+mean2 / mean1: 1.07
+--- 计算指标: timing_per_token_ms/gen 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_per_token_ms/gen: 0.36
+   范围标准差 timing_per_token_ms/gen: 0.04
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_per_token_ms/gen: 0.39
+   范围标准差 timing_per_token_ms/gen: 0.04
+mean1: 0.3626758745437446
+mean2: 0.38931649998716134
+mean2 / mean1: 1.07
+--- 计算指标: timing_s/step 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/step: 2633.03
+   范围标准差 timing_s/step: 245.84
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/step: 2819.02
+   范围标准差 timing_s/step: 269.80
+mean1: 2633.0259071808773
+mean2: 2819.0175326178783
+mean2 / mean1: 1.07
+--- 计算指标: timing_s/gen 在 Step 0 到 20 范围内的平均值 ---
+✅ 实验 DAPO-Qwen3-8B-VLLM-FP8-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/gen: 2006.33
+   范围标准差 timing_s/gen: 209.80
+✅ 实验 DAPO-Qwen3-8B-VLLM-BF16-ROLLOUT-bsz16-p_no_shuffle-r_20k-step150: (Step 0 to 20, 共 20 个点)
+   范围平均 timing_s/gen: 2184.98
+   范围标准差 timing_s/gen: 223.67
+mean1: 2006.3311894658486
+mean2: 2184.9760750993155
+mean2 / mean1: 1.09
