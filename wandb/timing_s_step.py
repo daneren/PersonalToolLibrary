@@ -1,3 +1,4 @@
+import os
 import wandb
 import pandas as pd # 引入 pandas 进行数据处理
 
@@ -7,8 +8,8 @@ api = wandb.Api()
 project_path = "lr-experiment/DAPO-FP8-ROLLOUT"
 
 # 替换为您的两次实验的完整路径或 Run ID
-run1_path = f"lr-experiment/DAPO-FP8-ROLLOUT/svp0p3rf" 
-run2_path = f"lr-experiment/DAPO-FP8-ROLLOUT/q6ibz7ti" 
+run1_path = os.getenv("RUN1_PATH", "lr-experiment/DAPO-FP8-ROLLOUT/svp0p3rf")
+run2_path = os.getenv("RUN2_PATH", "lr-experiment/DAPO-FP8-ROLLOUT/q6ibz7ti")
 
 # 要计算平均值的指标
 metric_key = "timing_s/step"
