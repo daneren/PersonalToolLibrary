@@ -7,5 +7,4 @@ alias cdowns="coscmd -c $DEFALULT_COS_CONF_PATH download -rf "
 alias cups="coscmd -c $DEFALULT_COS_CONF_PATH upload -rf "
 alias cdown="coscmd -c $DEFALULT_COS_CONF_PATH download -f "
 alias cup="coscmd -c $DEFALULT_COS_CONF_PATH upload -f "
-alias cdowns_pwd="coscmd -c $DEFALULT_COS_CONF_PATH download -rf $PWD $PWD"
-alias cups_pwd="coscmd -c $DEFALULT_COS_CONF_PATH upload -rf $PWD $PWD"
+
