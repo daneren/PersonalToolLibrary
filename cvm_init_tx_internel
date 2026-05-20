@@ -1,0 +1,70 @@
+# debug cmd
+# yum-config-manager --save --setopt=docker-ce-stable.skip_if_unavailable=true
+mkdir Download
+cd Download
+
+# Install docker
+yum install epel-release -y
+## docker-ce repo
+sudo tee /etc/yum.repos.d/docker-ce.repo <<-'EOF'
+[docker-ce-stable]
+name=Docker CE Stable - $basearch
+baseurl=https://mirrors.aliyun.com/docker-ce/linux/centos/7/$basearch/stable
+enabled=1
+gpgcheck=1
+gpgkey=https://mirrors.aliyun.com/docker-ce/linux/centos/gpg
+EOF
+yum install docker-ce -y
+systemctl start docker
+docker info
+
+# Install NVIDIA470.82.01 for V100
+if lspci | grep -i nvidia; then
+    echo "ture" 
+else
+    echo "Install NVIDIA470.82.01 for V100"
+    # Install NVIDIA470.82.01 for V100
+    wget https://us.download.nvidia.cn/tesla/470.82.01/NVIDIA-Linux-x86_64-470.82.01.run
+    sudo chmod a+x NVIDIA-Linux-x86_64-470.82.01.run
+    sudo ./NVIDIA-Linux-x86_64-470.82.01.run
+    nvidia-smi -pm 1
+fi
+
+# Install nvidia-docker
+## old
+# wget https://nvidia.github.io/nvidia-docker/centos7/x86_64/nvidia-docker.repo
+# cp nvidia-docker.repo /etc/yum.repos.d/nvidia-docker.repo
+# sudo yum install -y nvidia-docker2
+# yum install libnvidia-contain er1
+# sudo systemctl start docker && sudo systemctl enable docker
+# sudo systemctl restart docker
+# docker pull nvidia/cuda:10.0-devel
+# docker run -it --runtime=nvidia --rm nvidia/cuda:10.0-devel /bin/bash
+# nvidia-smi
+## 20240710
+curl -s -L https://nvidia.github.io/nvidia-docker/centos7/nvidia-docker.repo | sudo tee /etc/yum.repos.d/nvidia-docker.repo
+sudo yum install -y nvidia-docker2
+sudo systemctl start docker && sudo systemctl enable docker
+sudo systemctl restart docker
+# check
+docker pull nvidia/cuda:10.0-devel
+docker run -it --runtime=nvidia --rm nvidia/cuda:10.0-devel /bin/bash
+nvidia-smi
+
+sleep 10
+exit
+
+# Install Anaconda
+wget https://repo.anaconda.com/archive/Anaconda3-2021.05-Linux-x86_64.sh
+sudo chmod a+x Anaconda3-2021.05-Linux-x86_64.sh
+sudo ./Anaconda3-2021.05-Linux-x86_64.sh
+
+
+# Install python
+source ../.bashrc
+conda create -n py39 python=3.9 -y
+conda create -n py38 python=3.8 -y
+
+# Install tmux
+yum install libevent-devel ncurses-devel -y
+yum install tmux -y
